@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wundef  -Wno-strict-aliasing  -std=c11 -lm -Wno-pragmas  -fexcess-precision=fast  -fcx-limited-range  -fno-math-errno  -fwrapv  -O3 -DNDEBUG -O3 -DNDEBUG CMakeFiles/grb_jitpackage.dir/Source/grb_jitpackage.c.o -o grb_jitpackage  -lm 

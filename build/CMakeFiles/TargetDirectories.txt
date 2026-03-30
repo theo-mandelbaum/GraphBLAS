@@ -1,0 +1,15 @@
+/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles/GraphBLAS.dir
+/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles/edit_cache.dir
+/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles/rebuild_cache.dir
+/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles/list_install_components.dir
+/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles/install.dir
+/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles/install/local.dir
+/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles/install/strip.dir
+/nfs/home/mandeltd/GraphBLAS/build/JITpackage/CMakeFiles/grb_jitpackage.dir
+/nfs/home/mandeltd/GraphBLAS/build/JITpackage/CMakeFiles/GB_JITpackage.dir
+/nfs/home/mandeltd/GraphBLAS/build/JITpackage/CMakeFiles/edit_cache.dir
+/nfs/home/mandeltd/GraphBLAS/build/JITpackage/CMakeFiles/rebuild_cache.dir
+/nfs/home/mandeltd/GraphBLAS/build/JITpackage/CMakeFiles/list_install_components.dir
+/nfs/home/mandeltd/GraphBLAS/build/JITpackage/CMakeFiles/install.dir
+/nfs/home/mandeltd/GraphBLAS/build/JITpackage/CMakeFiles/install/local.dir
+/nfs/home/mandeltd/GraphBLAS/build/JITpackage/CMakeFiles/install/strip.dir

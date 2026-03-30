@@ -10,6 +10,8 @@
 #include "sort/GB_sort.h"
 #include "transpose/GB_transpose.h"
 #include "jitifyer/GB_stringify.h"
+#include <time.h>
+#include <stdio.h>
 
 //  macros:
 
@@ -334,6 +336,10 @@ GrB_Info GB_sort
     GrB_Info info ;
     ASSERT_MATRIX_OK (A, "A for GB_sort", GB0) ;
     ASSERT_BINARYOP_OK (op, "op for GB_sort", GB0) ;
+
+    // Timing instrumentation for Step 1 & Step 2 profiling
+    struct timespec t_sort_start, t_sort_end;
+    clock_gettime(CLOCK_MONOTONIC, &t_sort_start);
 
     GrB_Matrix T = NULL ;
     struct GB_Matrix_opaque T_header ;
@@ -850,7 +856,28 @@ GrB_Info GB_sort
     // free workspace, and comform/return result
     //--------------------------------------------------------------------------
 
+    struct timespec t_free_start, t_free_end;
+    clock_gettime(CLOCK_MONOTONIC, &t_free_start);
+    
     GB_FREE_WORKSPACE ;
+    
+    clock_gettime(CLOCK_MONOTONIC, &t_free_end);
+    double free_time_ms = (t_free_end.tv_sec - t_free_start.tv_sec) * 1000.0 +
+                          (t_free_end.tv_nsec - t_free_start.tv_nsec) / 1000000.0;
+
+    // Record overall timing and matrix info for profiling
+    clock_gettime(CLOCK_MONOTONIC, &t_sort_end);
+    double total_time_ms = (t_sort_end.tv_sec - t_sort_start.tv_sec) * 1000.0 +
+                           (t_sort_end.tv_nsec - t_sort_start.tv_nsec) / 1000000.0;
+    double sort_work_time_ms = total_time_ms - free_time_ms;
+    double cleanup_percent = 100.0 * free_time_ms / total_time_ms;
+    
+    // Output timing data in CSV format for Step 2 analysis
+    // Format: matrix_rows,matrix_cols,nnz,total_time_ms,sort_work_ms,cleanup_ms,cleanup_pct
+    int64_t matrix_nnz = cnz;
+    fprintf(stderr, "GBSORT_PROFILE: %lld,%lld,%lld,%.6f,%.6f,%.6f,%.2f\n",
+            (long long)anrows, (long long)ancols, (long long)matrix_nnz,
+            total_time_ms, sort_work_time_ms, free_time_ms, cleanup_percent);
 
     if (!C_is_NULL)
     { 
