@@ -13,7 +13,22 @@ Files
 
 Usage
 -----
-Run `python3 generate_poster_charts.py` from this directory.
+This script requires Python and the following packages:
+  - matplotlib
+  - numpy
+  - pandas
+
+It is recommended to run the script from a virtual environment.
+
+Example (MacOS/Linux):
+  python3 -m venv .venv
+  source .venv/bin/activate
+  pip install matplotlib numpy pandas
+  cd GraphBLAS/profiling/results/poster
+  python generate_poster_charts.py
+
+If you do not activate a virtual environment, use the venv Python directly:
+  /nfs/home/mandeltd/.venv/bin/python generate_poster_charts.py
 
 Data source
 -----------

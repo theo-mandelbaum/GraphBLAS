@@ -51,7 +51,20 @@ Poster visuals
 To regenerate or inspect poster charts:
 
    cd profiling/results/poster
-   python3 generate_poster_charts.py
+
+The poster chart generator requires Python packages:
+   matplotlib, numpy, pandas
+
+It is recommended to run this in a virtual environment.
+
+Example:
+   python3 -m venv .venv
+   source .venv/bin/activate
+   pip install matplotlib numpy pandas
+   python generate_poster_charts.py
+
+If you do not activate the venv, use the full interpreter path:
+   /nfs/home/mandeltd/.venv/bin/python generate_poster_charts.py
 
 Notes
 -----
