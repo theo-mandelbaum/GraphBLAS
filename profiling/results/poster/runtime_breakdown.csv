@@ -1,0 +1,9 @@
+item,group,percent
+GB_quicksort_3_32_32_32,Sort kernel,29.19
+__memmove_avx_unaligned_erms,Data movement / copy,19.91
+GB_assign_scalar,Scalar assignment,10.42
+GB_setElement,Element update,4.90
+GB_Pending_realloc,Memory management,0.99
+GB_BinaryOp_compatible,Binary op,0.69
+GB_nnz,Indexing,0.61
+OpenMP overhead,OpenMP overhead,33.29

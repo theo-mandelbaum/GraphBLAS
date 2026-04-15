@@ -53,9 +53,25 @@ To regenerate or inspect poster charts:
    cd profiling/results/poster
    python3 generate_poster_charts.py
 
+To make a runtime-dominance chart for top function costs:
+
+   cd profiling/results/poster
+   python3 generate_runtime_breakdown.py
+
 Notes
 -----
 - All profiling scripts should be executed from `GraphBLAS/profiling`.
 - The deallocation benchmark uses the GraphBLAS build in `GraphBLAS/build`.
 - `demonstrate_scaling.sh` and `run_analysis.sh` require `GraphBLAS/build/wathen_demo`.
 - If `wathen_demo` is missing, run `cd .. && make all`.
+- Use a Python virtual environment for matplotlib support:
+
+   cd profiling/results/poster
+   python3 -m venv .venv
+   source .venv/bin/activate
+   pip install --upgrade pip setuptools wheel
+   pip install matplotlib
+
+- If you want the runtime breakdown to reflect fresh perf data, delete `runtime_breakdown.csv` and rerun:
+
+   python3 generate_runtime_breakdown.py

@@ -9,16 +9,31 @@ Files
   dealloc_overhead_pct.png    - deallocation as % of sort time
   dealloc_vs_operations.png   - comparison with other GraphBLAS costs
   dealloc_summary.png         - summary table and findings
+  deallocation_pie_chart.png  - poster pie chart for runtime breakdown
+  deallocation_pie_chart.pdf  - poster PDF of the same chart
+  runtime_breakdown.png       - runtime breakdown chart of top costs
+  runtime_breakdown.pdf       - PDF export of runtime breakdown chart
   generate_poster_charts.py   - script that generates the charts
+  generate_runtime_breakdown.py - script that generates the runtime breakdown chart
 
 Usage
 -----
-Run `python3 generate_poster_charts.py` from this directory.
+Run `python3 generate_poster_charts.py` or `python3 generate_runtime_breakdown.py` from this directory.
+
+The runtime breakdown chart is data-driven:
+  - It reads runtime percentages from `runtime_breakdown.csv` by default.
+  - It can also parse perf output from `../analysis/top_functions.txt` if the CSV is missing.
+  - Use `--input path/to/file.csv` to provide a different data source.
 
 Data source
 -----------
-The chart script reads benchmark results from:
+The poster chart script reads benchmark results from:
   ../dealloc/dealloc_timing.csv
+
+The runtime breakdown chart uses:
+  runtime_breakdown.csv (sample data)
+
+If you want the latest runtime dominance view, remove or rename `runtime_breakdown.csv` and let the script parse `../analysis/top_functions.txt` automatically.
 
 This directory is intentionally separated from the raw benchmark outputs.
 
