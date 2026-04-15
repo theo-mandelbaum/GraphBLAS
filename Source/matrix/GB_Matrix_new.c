@@ -76,6 +76,15 @@ GrB_Info GB_Matrix_new          // create a new matrix with no entries
         return (GrB_INVALID_VALUE) ;
     }
 
+    // Optimization: for small matrices, force sequential execution to avoid
+    // OpenMP overhead that causes poor scaling
+    uint64_t matrix_size = nrows * ncols ;
+    int original_num_threads = omp_get_num_threads() ;
+    if (matrix_size < 10000)  // threshold for small matrices
+    {
+        omp_set_num_threads(1) ;
+    }
+
     //--------------------------------------------------------------------------
     // create the matrix
     //--------------------------------------------------------------------------
@@ -118,6 +127,12 @@ GrB_Info GB_Matrix_new          // create a new matrix with no entries
     GB_OK (GB_new (A, // auto sparsity (sparse/hyper), new header
         type, vlen, vdim, GB_ph_calloc, A_is_csc, GxB_AUTO_SPARSITY,
         GB_Global_hyper_switch_get ( ), 1, Ap_is_32, Aj_is_32, Ai_is_32)) ;
+
+    // restore original thread count
+    if (matrix_size < 10000)
+    {
+        omp_set_num_threads(original_num_threads) ;
+    }
 
     return (GrB_SUCCESS) ;
 }

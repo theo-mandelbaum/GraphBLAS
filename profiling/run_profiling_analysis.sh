@@ -18,17 +18,21 @@ RESULTS_DIR="$SCRIPT_DIR/results/dealloc"
 mkdir -p "$RESULTS_DIR"
 
 echo "========================================================================"
-echo "STEP 2: Deallocation Profiling Analysis"
+echo "Deallocation Profiling Analysis"
 echo "========================================================================"
 echo ""
 
-# Step 2a: Rebuild GraphBLAS with instrumented GB_sort
-echo "[1/3] Rebuilding GraphBLAS with timing instrumentation..."
-cd "$GRAPHBLAS_HOME"
-make clean >/dev/null 2>&1 || true
-make -j4 >/dev/null 2>&1
-
-echo "      Done. GraphBLAS built with GB_sort timing instrumentation."
+# Step 2a: Rebuild GraphBLAS with instrumented GB_sort (only if needed)
+echo "[1/3] Checking GraphBLAS build..."
+if [ ! -f "$GRAPHBLAS_HOME/build/libgraphblas.so.10" ]; then
+    echo "      Rebuilding GraphBLAS..."
+    cd "$GRAPHBLAS_HOME"
+    make clean >/dev/null 2>&1 || true
+    make -j4 >/dev/null 2>&1
+    echo "      Done."
+else
+    echo "      GraphBLAS already built, skipping rebuild."
+fi
 echo ""
 
 # Step 2b: Build the isolated deallocation micro-benchmark
@@ -47,8 +51,8 @@ echo ""
 echo "[3/3] Running isolated deallocation micro-benchmark..."
 echo "      (This may take a few minutes for large matrix sizes)"
 export LD_LIBRARY_PATH="$GRAPHBLAS_HOME/build:$LD_LIBRARY_PATH"
-"$RESULTS_DIR/benchmark_dealloc" 2>"$RESULTS_DIR/dealloc_benchmark.log" \
-                                   >"$RESULTS_DIR/dealloc_timing.csv"
+timeout 600 "$RESULTS_DIR/benchmark_dealloc" 2>"$RESULTS_DIR/dealloc_benchmark.log" \
+                                   >"$RESULTS_DIR/dealloc_timing.csv" || echo "Benchmark timed out after 10 minutes"
 
 echo "      Done. Results saved to:"
 echo "        - $RESULTS_DIR/dealloc_timing.csv"
