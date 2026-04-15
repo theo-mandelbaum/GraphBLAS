@@ -1,0 +1,20 @@
+    30.97%    30.97%  wathen_demo  libgraphblas.so.10.3.0  [.] GB_quicksort_3_32_32_32
+            |--0.64%--0x142da000142db
+            |--0.64%--0x2a5980002a579
+             --0.53%--0x3eb020003eb50
+    29.35%     0.00%  wathen_demo  [unknown]               [.] 0000000000000000
+               |--15.79%--0x7fb6f0ec6e62
+               |--10.74%--0x7fb6f0ec702a
+               |--0.83%--0x7fb6f0ec6e6d
+                --0.71%--GB_builder._omp_fn.6
+    22.04%    21.87%  wathen_demo  libc-2.28.so            [.] __memmove_avx_unaligned_erms
+    17.90%    17.90%  wathen_demo  libgomp.so.1.0.0        [.] 0x000000000001de62
+            |--15.79%--0
+             --2.06%--0x7fb6f0ec6e62
+    17.90%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x00007fb6f0ec6e62
+    10.74%    10.74%  wathen_demo  libgomp.so.1.0.0        [.] 0x000000000001e02a
+    10.74%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x00007fb6f0ec702a
+     3.57%     3.57%  wathen_demo  libgraphblas.so.10.3.0  [.] GB_msort_3_32_32_32._omp_fn.2
+     3.15%     2.22%  wathen_demo  libgraphblas.so.10.3.0  [.] GB__bld__plus_fp64._omp_fn.2
+                --0.93%--0xffffffffbcc011fe
+                           --0.81%--0xffffffffbc082da7

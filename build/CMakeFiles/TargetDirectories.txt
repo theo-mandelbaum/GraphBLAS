@@ -1,4 +1,11 @@
 /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles/GraphBLAS.dir
+/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles/complex_demo.dir
+/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles/simple_demo.dir
+/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles/wildtype_demo.dir
+/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles/wathen_demo.dir
+/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles/context_demo.dir
+/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles/gauss_demo.dir
+/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles/grow_demo.dir
 /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles/edit_cache.dir
 /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles/rebuild_cache.dir
 /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles/list_install_components.dir

@@ -175,6 +175,97 @@ GraphBLAS/fast:
 .PHONY : GraphBLAS/fast
 
 #=============================================================================
+# Target rules for targets named complex_demo
+
+# Build rule for target.
+complex_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 complex_demo
+.PHONY : complex_demo
+
+# fast build rule for target.
+complex_demo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_demo.dir/build.make CMakeFiles/complex_demo.dir/build
+.PHONY : complex_demo/fast
+
+#=============================================================================
+# Target rules for targets named simple_demo
+
+# Build rule for target.
+simple_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simple_demo
+.PHONY : simple_demo
+
+# fast build rule for target.
+simple_demo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_demo.dir/build.make CMakeFiles/simple_demo.dir/build
+.PHONY : simple_demo/fast
+
+#=============================================================================
+# Target rules for targets named wildtype_demo
+
+# Build rule for target.
+wildtype_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 wildtype_demo
+.PHONY : wildtype_demo
+
+# fast build rule for target.
+wildtype_demo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wildtype_demo.dir/build.make CMakeFiles/wildtype_demo.dir/build
+.PHONY : wildtype_demo/fast
+
+#=============================================================================
+# Target rules for targets named wathen_demo
+
+# Build rule for target.
+wathen_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 wathen_demo
+.PHONY : wathen_demo
+
+# fast build rule for target.
+wathen_demo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wathen_demo.dir/build.make CMakeFiles/wathen_demo.dir/build
+.PHONY : wathen_demo/fast
+
+#=============================================================================
+# Target rules for targets named context_demo
+
+# Build rule for target.
+context_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 context_demo
+.PHONY : context_demo
+
+# fast build rule for target.
+context_demo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/context_demo.dir/build.make CMakeFiles/context_demo.dir/build
+.PHONY : context_demo/fast
+
+#=============================================================================
+# Target rules for targets named gauss_demo
+
+# Build rule for target.
+gauss_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gauss_demo
+.PHONY : gauss_demo
+
+# fast build rule for target.
+gauss_demo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gauss_demo.dir/build.make CMakeFiles/gauss_demo.dir/build
+.PHONY : gauss_demo/fast
+
+#=============================================================================
+# Target rules for targets named grow_demo
+
+# Build rule for target.
+grow_demo: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 grow_demo
+.PHONY : grow_demo
+
+# fast build rule for target.
+grow_demo/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grow_demo.dir/build.make CMakeFiles/grow_demo.dir/build
+.PHONY : grow_demo/fast
+
+#=============================================================================
 # Target rules for targets named grb_jitpackage
 
 # Build rule for target.
@@ -223,6 +314,174 @@ Config/GB_prejit.s: Config/GB_prejit.c.s
 Config/GB_prejit.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphBLAS.dir/build.make CMakeFiles/GraphBLAS.dir/Config/GB_prejit.c.s
 .PHONY : Config/GB_prejit.c.s
+
+Demo/Program/complex_demo.o: Demo/Program/complex_demo.c.o
+.PHONY : Demo/Program/complex_demo.o
+
+# target to build an object file
+Demo/Program/complex_demo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_demo.dir/build.make CMakeFiles/complex_demo.dir/Demo/Program/complex_demo.c.o
+.PHONY : Demo/Program/complex_demo.c.o
+
+Demo/Program/complex_demo.i: Demo/Program/complex_demo.c.i
+.PHONY : Demo/Program/complex_demo.i
+
+# target to preprocess a source file
+Demo/Program/complex_demo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_demo.dir/build.make CMakeFiles/complex_demo.dir/Demo/Program/complex_demo.c.i
+.PHONY : Demo/Program/complex_demo.c.i
+
+Demo/Program/complex_demo.s: Demo/Program/complex_demo.c.s
+.PHONY : Demo/Program/complex_demo.s
+
+# target to generate assembly for a file
+Demo/Program/complex_demo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_demo.dir/build.make CMakeFiles/complex_demo.dir/Demo/Program/complex_demo.c.s
+.PHONY : Demo/Program/complex_demo.c.s
+
+Demo/Program/context_demo.o: Demo/Program/context_demo.c.o
+.PHONY : Demo/Program/context_demo.o
+
+# target to build an object file
+Demo/Program/context_demo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/context_demo.dir/build.make CMakeFiles/context_demo.dir/Demo/Program/context_demo.c.o
+.PHONY : Demo/Program/context_demo.c.o
+
+Demo/Program/context_demo.i: Demo/Program/context_demo.c.i
+.PHONY : Demo/Program/context_demo.i
+
+# target to preprocess a source file
+Demo/Program/context_demo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/context_demo.dir/build.make CMakeFiles/context_demo.dir/Demo/Program/context_demo.c.i
+.PHONY : Demo/Program/context_demo.c.i
+
+Demo/Program/context_demo.s: Demo/Program/context_demo.c.s
+.PHONY : Demo/Program/context_demo.s
+
+# target to generate assembly for a file
+Demo/Program/context_demo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/context_demo.dir/build.make CMakeFiles/context_demo.dir/Demo/Program/context_demo.c.s
+.PHONY : Demo/Program/context_demo.c.s
+
+Demo/Program/gauss_demo.o: Demo/Program/gauss_demo.c.o
+.PHONY : Demo/Program/gauss_demo.o
+
+# target to build an object file
+Demo/Program/gauss_demo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gauss_demo.dir/build.make CMakeFiles/gauss_demo.dir/Demo/Program/gauss_demo.c.o
+.PHONY : Demo/Program/gauss_demo.c.o
+
+Demo/Program/gauss_demo.i: Demo/Program/gauss_demo.c.i
+.PHONY : Demo/Program/gauss_demo.i
+
+# target to preprocess a source file
+Demo/Program/gauss_demo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gauss_demo.dir/build.make CMakeFiles/gauss_demo.dir/Demo/Program/gauss_demo.c.i
+.PHONY : Demo/Program/gauss_demo.c.i
+
+Demo/Program/gauss_demo.s: Demo/Program/gauss_demo.c.s
+.PHONY : Demo/Program/gauss_demo.s
+
+# target to generate assembly for a file
+Demo/Program/gauss_demo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gauss_demo.dir/build.make CMakeFiles/gauss_demo.dir/Demo/Program/gauss_demo.c.s
+.PHONY : Demo/Program/gauss_demo.c.s
+
+Demo/Program/grow_demo.o: Demo/Program/grow_demo.c.o
+.PHONY : Demo/Program/grow_demo.o
+
+# target to build an object file
+Demo/Program/grow_demo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grow_demo.dir/build.make CMakeFiles/grow_demo.dir/Demo/Program/grow_demo.c.o
+.PHONY : Demo/Program/grow_demo.c.o
+
+Demo/Program/grow_demo.i: Demo/Program/grow_demo.c.i
+.PHONY : Demo/Program/grow_demo.i
+
+# target to preprocess a source file
+Demo/Program/grow_demo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grow_demo.dir/build.make CMakeFiles/grow_demo.dir/Demo/Program/grow_demo.c.i
+.PHONY : Demo/Program/grow_demo.c.i
+
+Demo/Program/grow_demo.s: Demo/Program/grow_demo.c.s
+.PHONY : Demo/Program/grow_demo.s
+
+# target to generate assembly for a file
+Demo/Program/grow_demo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grow_demo.dir/build.make CMakeFiles/grow_demo.dir/Demo/Program/grow_demo.c.s
+.PHONY : Demo/Program/grow_demo.c.s
+
+Demo/Program/simple_demo.o: Demo/Program/simple_demo.c.o
+.PHONY : Demo/Program/simple_demo.o
+
+# target to build an object file
+Demo/Program/simple_demo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_demo.dir/build.make CMakeFiles/simple_demo.dir/Demo/Program/simple_demo.c.o
+.PHONY : Demo/Program/simple_demo.c.o
+
+Demo/Program/simple_demo.i: Demo/Program/simple_demo.c.i
+.PHONY : Demo/Program/simple_demo.i
+
+# target to preprocess a source file
+Demo/Program/simple_demo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_demo.dir/build.make CMakeFiles/simple_demo.dir/Demo/Program/simple_demo.c.i
+.PHONY : Demo/Program/simple_demo.c.i
+
+Demo/Program/simple_demo.s: Demo/Program/simple_demo.c.s
+.PHONY : Demo/Program/simple_demo.s
+
+# target to generate assembly for a file
+Demo/Program/simple_demo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_demo.dir/build.make CMakeFiles/simple_demo.dir/Demo/Program/simple_demo.c.s
+.PHONY : Demo/Program/simple_demo.c.s
+
+Demo/Program/wathen_demo.o: Demo/Program/wathen_demo.c.o
+.PHONY : Demo/Program/wathen_demo.o
+
+# target to build an object file
+Demo/Program/wathen_demo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wathen_demo.dir/build.make CMakeFiles/wathen_demo.dir/Demo/Program/wathen_demo.c.o
+.PHONY : Demo/Program/wathen_demo.c.o
+
+Demo/Program/wathen_demo.i: Demo/Program/wathen_demo.c.i
+.PHONY : Demo/Program/wathen_demo.i
+
+# target to preprocess a source file
+Demo/Program/wathen_demo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wathen_demo.dir/build.make CMakeFiles/wathen_demo.dir/Demo/Program/wathen_demo.c.i
+.PHONY : Demo/Program/wathen_demo.c.i
+
+Demo/Program/wathen_demo.s: Demo/Program/wathen_demo.c.s
+.PHONY : Demo/Program/wathen_demo.s
+
+# target to generate assembly for a file
+Demo/Program/wathen_demo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wathen_demo.dir/build.make CMakeFiles/wathen_demo.dir/Demo/Program/wathen_demo.c.s
+.PHONY : Demo/Program/wathen_demo.c.s
+
+Demo/Program/wildtype_demo.o: Demo/Program/wildtype_demo.c.o
+.PHONY : Demo/Program/wildtype_demo.o
+
+# target to build an object file
+Demo/Program/wildtype_demo.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wildtype_demo.dir/build.make CMakeFiles/wildtype_demo.dir/Demo/Program/wildtype_demo.c.o
+.PHONY : Demo/Program/wildtype_demo.c.o
+
+Demo/Program/wildtype_demo.i: Demo/Program/wildtype_demo.c.i
+.PHONY : Demo/Program/wildtype_demo.i
+
+# target to preprocess a source file
+Demo/Program/wildtype_demo.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wildtype_demo.dir/build.make CMakeFiles/wildtype_demo.dir/Demo/Program/wildtype_demo.c.i
+.PHONY : Demo/Program/wildtype_demo.c.i
+
+Demo/Program/wildtype_demo.s: Demo/Program/wildtype_demo.c.s
+.PHONY : Demo/Program/wildtype_demo.s
+
+# target to generate assembly for a file
+Demo/Program/wildtype_demo.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wildtype_demo.dir/build.make CMakeFiles/wildtype_demo.dir/Demo/Program/wildtype_demo.c.s
+.PHONY : Demo/Program/wildtype_demo.c.s
 
 FactoryKernels/GB_AxB__any_div_fc32.o: FactoryKernels/GB_AxB__any_div_fc32.c.o
 .PHONY : FactoryKernels/GB_AxB__any_div_fc32.o
@@ -73534,10 +73793,38 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... GB_JITpackage"
 	@echo "... GraphBLAS"
+	@echo "... complex_demo"
+	@echo "... context_demo"
+	@echo "... gauss_demo"
 	@echo "... grb_jitpackage"
+	@echo "... grow_demo"
+	@echo "... simple_demo"
+	@echo "... wathen_demo"
+	@echo "... wildtype_demo"
 	@echo "... Config/GB_prejit.o"
 	@echo "... Config/GB_prejit.i"
 	@echo "... Config/GB_prejit.s"
+	@echo "... Demo/Program/complex_demo.o"
+	@echo "... Demo/Program/complex_demo.i"
+	@echo "... Demo/Program/complex_demo.s"
+	@echo "... Demo/Program/context_demo.o"
+	@echo "... Demo/Program/context_demo.i"
+	@echo "... Demo/Program/context_demo.s"
+	@echo "... Demo/Program/gauss_demo.o"
+	@echo "... Demo/Program/gauss_demo.i"
+	@echo "... Demo/Program/gauss_demo.s"
+	@echo "... Demo/Program/grow_demo.o"
+	@echo "... Demo/Program/grow_demo.i"
+	@echo "... Demo/Program/grow_demo.s"
+	@echo "... Demo/Program/simple_demo.o"
+	@echo "... Demo/Program/simple_demo.i"
+	@echo "... Demo/Program/simple_demo.s"
+	@echo "... Demo/Program/wathen_demo.o"
+	@echo "... Demo/Program/wathen_demo.i"
+	@echo "... Demo/Program/wathen_demo.s"
+	@echo "... Demo/Program/wildtype_demo.o"
+	@echo "... Demo/Program/wildtype_demo.i"
+	@echo "... Demo/Program/wildtype_demo.s"
 	@echo "... FactoryKernels/GB_AxB__any_div_fc32.o"
 	@echo "... FactoryKernels/GB_AxB__any_div_fc32.i"
 	@echo "... FactoryKernels/GB_AxB__any_div_fc32.s"

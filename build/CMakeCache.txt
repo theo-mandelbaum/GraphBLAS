@@ -18,7 +18,7 @@
 // libraries
 BUILD_SHARED_LIBS:BOOL=ON
 
-//OFF (default): do not build static libraries.  ON: build static
+//OFF: do not build static libraries.  ON (default): build static
 // libraries
 BUILD_STATIC_LIBS:BOOL=OFF
 
@@ -529,7 +529,7 @@ SUITESPARSE_C_TO_FORTRAN:STRING=(name,NAME) name##_
 
 //ON: Build the demo programs.  OFF (default): do not build the
 // demo programs.
-SUITESPARSE_DEMOS:BOOL=OFF
+SUITESPARSE_DEMOS:BOOL=1
 
 //Postfix for installation target of header from SuiteSparse (default:
 // "suitesparse")

@@ -64,6 +64,13 @@ CMAKE_BINARY_DIR = /nfs/home/mandeltd/GraphBLAS/build
 
 # The main recursive "all" target.
 all: CMakeFiles/GraphBLAS.dir/all
+all: CMakeFiles/complex_demo.dir/all
+all: CMakeFiles/simple_demo.dir/all
+all: CMakeFiles/wildtype_demo.dir/all
+all: CMakeFiles/wathen_demo.dir/all
+all: CMakeFiles/context_demo.dir/all
+all: CMakeFiles/gauss_demo.dir/all
+all: CMakeFiles/grow_demo.dir/all
 all: JITpackage/all
 .PHONY : all
 
@@ -73,6 +80,13 @@ preinstall: JITpackage/preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/GraphBLAS.dir/clean
+clean: CMakeFiles/complex_demo.dir/clean
+clean: CMakeFiles/simple_demo.dir/clean
+clean: CMakeFiles/wildtype_demo.dir/clean
+clean: CMakeFiles/wathen_demo.dir/clean
+clean: CMakeFiles/context_demo.dir/clean
+clean: CMakeFiles/gauss_demo.dir/clean
+clean: CMakeFiles/grow_demo.dir/clean
 clean: JITpackage/clean
 .PHONY : clean
 
@@ -104,7 +118,7 @@ CMakeFiles/GraphBLAS.dir/all: JITpackage/CMakeFiles/GB_JITpackage.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/GraphBLAS.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 100
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 99
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/GraphBLAS.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 0
 .PHONY : CMakeFiles/GraphBLAS.dir/rule
@@ -119,18 +133,200 @@ CMakeFiles/GraphBLAS.dir/clean:
 .PHONY : CMakeFiles/GraphBLAS.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/complex_demo.dir
+
+# All Build rule for target.
+CMakeFiles/complex_demo.dir/all: CMakeFiles/GraphBLAS.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_demo.dir/build.make CMakeFiles/complex_demo.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_demo.dir/build.make CMakeFiles/complex_demo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles --progress-num= "Built target complex_demo"
+.PHONY : CMakeFiles/complex_demo.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/complex_demo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 99
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/complex_demo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 0
+.PHONY : CMakeFiles/complex_demo.dir/rule
+
+# Convenience name for target.
+complex_demo: CMakeFiles/complex_demo.dir/rule
+.PHONY : complex_demo
+
+# clean rule for target.
+CMakeFiles/complex_demo.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex_demo.dir/build.make CMakeFiles/complex_demo.dir/clean
+.PHONY : CMakeFiles/complex_demo.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/simple_demo.dir
+
+# All Build rule for target.
+CMakeFiles/simple_demo.dir/all: CMakeFiles/GraphBLAS.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_demo.dir/build.make CMakeFiles/simple_demo.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_demo.dir/build.make CMakeFiles/simple_demo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles --progress-num= "Built target simple_demo"
+.PHONY : CMakeFiles/simple_demo.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/simple_demo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 99
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/simple_demo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 0
+.PHONY : CMakeFiles/simple_demo.dir/rule
+
+# Convenience name for target.
+simple_demo: CMakeFiles/simple_demo.dir/rule
+.PHONY : simple_demo
+
+# clean rule for target.
+CMakeFiles/simple_demo.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_demo.dir/build.make CMakeFiles/simple_demo.dir/clean
+.PHONY : CMakeFiles/simple_demo.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/wildtype_demo.dir
+
+# All Build rule for target.
+CMakeFiles/wildtype_demo.dir/all: CMakeFiles/GraphBLAS.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wildtype_demo.dir/build.make CMakeFiles/wildtype_demo.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wildtype_demo.dir/build.make CMakeFiles/wildtype_demo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles --progress-num=100 "Built target wildtype_demo"
+.PHONY : CMakeFiles/wildtype_demo.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/wildtype_demo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 100
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/wildtype_demo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 0
+.PHONY : CMakeFiles/wildtype_demo.dir/rule
+
+# Convenience name for target.
+wildtype_demo: CMakeFiles/wildtype_demo.dir/rule
+.PHONY : wildtype_demo
+
+# clean rule for target.
+CMakeFiles/wildtype_demo.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wildtype_demo.dir/build.make CMakeFiles/wildtype_demo.dir/clean
+.PHONY : CMakeFiles/wildtype_demo.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/wathen_demo.dir
+
+# All Build rule for target.
+CMakeFiles/wathen_demo.dir/all: CMakeFiles/GraphBLAS.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wathen_demo.dir/build.make CMakeFiles/wathen_demo.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wathen_demo.dir/build.make CMakeFiles/wathen_demo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles --progress-num= "Built target wathen_demo"
+.PHONY : CMakeFiles/wathen_demo.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/wathen_demo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 99
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/wathen_demo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 0
+.PHONY : CMakeFiles/wathen_demo.dir/rule
+
+# Convenience name for target.
+wathen_demo: CMakeFiles/wathen_demo.dir/rule
+.PHONY : wathen_demo
+
+# clean rule for target.
+CMakeFiles/wathen_demo.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wathen_demo.dir/build.make CMakeFiles/wathen_demo.dir/clean
+.PHONY : CMakeFiles/wathen_demo.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/context_demo.dir
+
+# All Build rule for target.
+CMakeFiles/context_demo.dir/all: CMakeFiles/GraphBLAS.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/context_demo.dir/build.make CMakeFiles/context_demo.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/context_demo.dir/build.make CMakeFiles/context_demo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles --progress-num= "Built target context_demo"
+.PHONY : CMakeFiles/context_demo.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/context_demo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 99
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/context_demo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 0
+.PHONY : CMakeFiles/context_demo.dir/rule
+
+# Convenience name for target.
+context_demo: CMakeFiles/context_demo.dir/rule
+.PHONY : context_demo
+
+# clean rule for target.
+CMakeFiles/context_demo.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/context_demo.dir/build.make CMakeFiles/context_demo.dir/clean
+.PHONY : CMakeFiles/context_demo.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/gauss_demo.dir
+
+# All Build rule for target.
+CMakeFiles/gauss_demo.dir/all: CMakeFiles/GraphBLAS.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gauss_demo.dir/build.make CMakeFiles/gauss_demo.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gauss_demo.dir/build.make CMakeFiles/gauss_demo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles --progress-num= "Built target gauss_demo"
+.PHONY : CMakeFiles/gauss_demo.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/gauss_demo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 99
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/gauss_demo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 0
+.PHONY : CMakeFiles/gauss_demo.dir/rule
+
+# Convenience name for target.
+gauss_demo: CMakeFiles/gauss_demo.dir/rule
+.PHONY : gauss_demo
+
+# clean rule for target.
+CMakeFiles/gauss_demo.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gauss_demo.dir/build.make CMakeFiles/gauss_demo.dir/clean
+.PHONY : CMakeFiles/gauss_demo.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/grow_demo.dir
+
+# All Build rule for target.
+CMakeFiles/grow_demo.dir/all: CMakeFiles/GraphBLAS.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grow_demo.dir/build.make CMakeFiles/grow_demo.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grow_demo.dir/build.make CMakeFiles/grow_demo.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles --progress-num= "Built target grow_demo"
+.PHONY : CMakeFiles/grow_demo.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/grow_demo.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 99
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/grow_demo.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 0
+.PHONY : CMakeFiles/grow_demo.dir/rule
+
+# Convenience name for target.
+grow_demo: CMakeFiles/grow_demo.dir/rule
+.PHONY : grow_demo
+
+# clean rule for target.
+CMakeFiles/grow_demo.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/grow_demo.dir/build.make CMakeFiles/grow_demo.dir/clean
+.PHONY : CMakeFiles/grow_demo.dir/clean
+
+#=============================================================================
 # Target rules for target JITpackage/CMakeFiles/grb_jitpackage.dir
 
 # All Build rule for target.
 JITpackage/CMakeFiles/grb_jitpackage.dir/all:
 	$(MAKE) $(MAKESILENT) -f JITpackage/CMakeFiles/grb_jitpackage.dir/build.make JITpackage/CMakeFiles/grb_jitpackage.dir/depend
 	$(MAKE) $(MAKESILENT) -f JITpackage/CMakeFiles/grb_jitpackage.dir/build.make JITpackage/CMakeFiles/grb_jitpackage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles --progress-num=100 "Built target grb_jitpackage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/nfs/home/mandeltd/GraphBLAS/build/CMakeFiles --progress-num= "Built target grb_jitpackage"
 .PHONY : JITpackage/CMakeFiles/grb_jitpackage.dir/all
 
 # Build rule for subdir invocation for target.
 JITpackage/CMakeFiles/grb_jitpackage.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 JITpackage/CMakeFiles/grb_jitpackage.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 0
 .PHONY : JITpackage/CMakeFiles/grb_jitpackage.dir/rule
@@ -156,7 +352,7 @@ JITpackage/CMakeFiles/GB_JITpackage.dir/all: JITpackage/CMakeFiles/grb_jitpackag
 
 # Build rule for subdir invocation for target.
 JITpackage/CMakeFiles/GB_JITpackage.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 JITpackage/CMakeFiles/GB_JITpackage.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /nfs/home/mandeltd/GraphBLAS/build/CMakeFiles 0
 .PHONY : JITpackage/CMakeFiles/GB_JITpackage.dir/rule

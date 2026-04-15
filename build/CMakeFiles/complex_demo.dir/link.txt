@@ -1,0 +1,1 @@
+/usr/bin/cc  -Wundef  -Wno-strict-aliasing  -std=c11 -lm -Wno-pragmas  -fexcess-precision=fast  -fcx-limited-range  -fno-math-errno  -fwrapv  -O3 -DNDEBUG -O3 -DNDEBUG CMakeFiles/complex_demo.dir/Demo/Program/complex_demo.c.o -o complex_demo  -Wl,-rpath,/nfs/home/mandeltd/GraphBLAS/build libgraphblas.so.10.3.0 

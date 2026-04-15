@@ -1,0 +1,6 @@
+Date: Wed Apr 15 00:37:26 EDT 2026
+Hostname: login02.cluster.cs.jmu.edu
+CPU cores: 32
+RAM: 62Gi
+GCC version: gcc (GCC) 8.5.0 20210514 (Red Hat 8.5.0-22)
+OpenMP version: 

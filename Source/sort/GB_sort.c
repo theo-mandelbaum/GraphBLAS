@@ -344,6 +344,11 @@ GrB_Info GB_sort
     GrB_Matrix T = NULL ;
     struct GB_Matrix_opaque T_header ;
     GB_WERK_DECLARE (C_ek_slicing, int64_t) ;
+    
+    // Timing markers for decomposing copy overhead
+    struct timespec t_dup_start, t_dup_end, t_transpose_start, t_transpose_end;
+    struct timespec t_cast_start, t_cast_end;
+    double dup_time_ms = 0.0, transpose_time_ms = 0.0, cast_time_ms = 0.0;
 
     int nthreads_max = GB_Context_nthreads_max ( ) ;
     double chunk = GB_Context_chunk ( ) ;
@@ -431,8 +436,12 @@ GrB_Info GB_sort
             // A is already CSC
             if (!sort_in_place)
             { 
-                // C = A
+                // C = A (duplication)
+                clock_gettime(CLOCK_MONOTONIC, &t_dup_start);
                 GB_OK (GB_dup_worker (&C, A_iso, A, true, atype)) ;
+                clock_gettime(CLOCK_MONOTONIC, &t_dup_end);
+                dup_time_ms += (t_dup_end.tv_sec - t_dup_start.tv_sec) * 1000.0 +
+                               (t_dup_end.tv_nsec - t_dup_start.tv_nsec) / 1000000.0;
             }
         }
         else
@@ -440,13 +449,21 @@ GrB_Info GB_sort
             // A is CSR but C must be CSC
             if (sort_in_place)
             { 
-                // C = C'
+                // C = C' (in-place transpose)
+                clock_gettime(CLOCK_MONOTONIC, &t_transpose_start);
                 GB_OK (GB_transpose_in_place (C, true, Werk)) ;
+                clock_gettime(CLOCK_MONOTONIC, &t_transpose_end);
+                transpose_time_ms += (t_transpose_end.tv_sec - t_transpose_start.tv_sec) * 1000.0 +
+                                     (t_transpose_end.tv_nsec - t_transpose_start.tv_nsec) / 1000000.0;
             }
             else
             { 
-                // C = A'
+                // C = A' (transpose with cast)
+                clock_gettime(CLOCK_MONOTONIC, &t_transpose_start);
                 GB_OK (GB_transpose_cast (C, atype, true, A, false, Werk)) ;
+                clock_gettime(CLOCK_MONOTONIC, &t_transpose_end);
+                transpose_time_ms += (t_transpose_end.tv_sec - t_transpose_start.tv_sec) * 1000.0 +
+                                     (t_transpose_end.tv_nsec - t_transpose_start.tv_nsec) / 1000000.0;
             }
         }
     }
@@ -458,8 +475,12 @@ GrB_Info GB_sort
             // A is already CSR
             if (!sort_in_place)
             { 
-                // C = A
+                // C = A (duplication)
+                clock_gettime(CLOCK_MONOTONIC, &t_dup_start);
                 GB_OK (GB_dup_worker (&C, A_iso, A, true, atype)) ;
+                clock_gettime(CLOCK_MONOTONIC, &t_dup_end);
+                dup_time_ms += (t_dup_end.tv_sec - t_dup_start.tv_sec) * 1000.0 +
+                               (t_dup_end.tv_nsec - t_dup_start.tv_nsec) / 1000000.0;
             }
         }
         else
@@ -467,13 +488,21 @@ GrB_Info GB_sort
             // A is CSC but C must be CSR
             if (sort_in_place)
             { 
-                // C = C'
+                // C = C' (in-place transpose)
+                clock_gettime(CLOCK_MONOTONIC, &t_transpose_start);
                 GB_OK (GB_transpose_in_place (C, false, Werk)) ;
+                clock_gettime(CLOCK_MONOTONIC, &t_transpose_end);
+                transpose_time_ms += (t_transpose_end.tv_sec - t_transpose_start.tv_sec) * 1000.0 +
+                                     (t_transpose_end.tv_nsec - t_transpose_start.tv_nsec) / 1000000.0;
             }
             else
             { 
-                // C = A'
+                // C = A' (transpose with cast)
+                clock_gettime(CLOCK_MONOTONIC, &t_transpose_start);
                 GB_OK (GB_transpose_cast (C, atype, false, A, false, Werk)) ;
+                clock_gettime(CLOCK_MONOTONIC, &t_transpose_end);
+                transpose_time_ms += (t_transpose_end.tv_sec - t_transpose_start.tv_sec) * 1000.0 +
+                                     (t_transpose_end.tv_nsec - t_transpose_start.tv_nsec) / 1000000.0;
             }
         }
     }
@@ -827,6 +856,7 @@ GrB_Info GB_sort
 
             // copy from C to P
 //          GB_memcpy (P->x, C->i, cnz * sizeof (int64_t), nthreads_max) ;
+            clock_gettime(CLOCK_MONOTONIC, &t_cast_start);
             GB_cast_int (P->x, pxcode, C->i, cicode, cnz, nthreads_max) ;
 //          GB_memcpy (P->p, C->p, (cnvec+1) * sizeof (int64_t), nthreads_max) ;
             GB_cast_int (P->p, ppcode, C->p, cpcode, cnvec+1, nthreads_max) ;
@@ -835,6 +865,9 @@ GrB_Info GB_sort
 //              GB_memcpy (P->h, C->h, cnvec * sizeof (int64_t), nthreads_max) ;
                 GB_cast_int (P->h, pjcode, C->h, cjcode, cnvec, nthreads_max) ;
             }
+            clock_gettime(CLOCK_MONOTONIC, &t_cast_end);
+            cast_time_ms = (t_cast_end.tv_sec - t_cast_start.tv_sec) * 1000.0 +
+                           (t_cast_end.tv_nsec - t_cast_start.tv_nsec) / 1000000.0;
         }
 
         P->nvals = cnz ;
@@ -878,6 +911,10 @@ GrB_Info GB_sort
     fprintf(stderr, "GBSORT_PROFILE: %lld,%lld,%lld,%.6f,%.6f,%.6f,%.2f\n",
             (long long)anrows, (long long)ancols, (long long)matrix_nnz,
             total_time_ms, sort_work_time_ms, free_time_ms, cleanup_percent);
+    
+    // Output detailed copy operation breakdown
+    fprintf(stderr, "GBSORT_COPY_BREAKDOWN: dup_ms=%.6f, transpose_ms=%.6f, cast_ms=%.6f\n",
+            dup_time_ms, transpose_time_ms, cast_time_ms);
 
     if (!C_is_NULL)
     { 

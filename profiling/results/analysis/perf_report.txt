@@ -1,0 +1,636 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 919  of event 'cycles:u'
+# Event count (approx.): 443716937
+#
+# Children      Self  Command      Shared Object           Symbol                             
+# ........  ........  ...........  ......................  ...................................
+#
+    30.97%    30.97%  wathen_demo  libgraphblas.so.10.3.0  [.] GB_quicksort_3_32_32_32
+            |          
+            |--0.64%--0x142da000142db
+            |          GB_quicksort_3_32_32_32
+            |          
+            |--0.64%--0x2a5980002a579
+            |          GB_quicksort_3_32_32_32
+            |          
+             --0.53%--0x3eb020003eb50
+                       GB_quicksort_3_32_32_32
+
+    29.35%     0.00%  wathen_demo  [unknown]               [.] 0000000000000000
+            |
+            ---0
+               |          
+               |--15.79%--0x7fb6f0ec6e62
+               |          
+               |--10.74%--0x7fb6f0ec702a
+               |          
+               |--0.83%--0x7fb6f0ec6e6d
+               |          
+                --0.71%--GB_builder._omp_fn.6
+
+    22.04%    21.87%  wathen_demo  libc-2.28.so            [.] __memmove_avx_unaligned_erms
+            |
+            ---__memmove_avx_unaligned_erms
+
+    17.90%    17.90%  wathen_demo  libgomp.so.1.0.0        [.] 0x000000000001de62
+            |          
+            |--15.79%--0
+            |          0x7fb6f0ec6e62
+            |          
+             --2.06%--0x7fb6f0ec6e62
+
+    17.90%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x00007fb6f0ec6e62
+            |
+            ---0x7fb6f0ec6e62
+
+    10.74%    10.74%  wathen_demo  libgomp.so.1.0.0        [.] 0x000000000001e02a
+            |
+            ---0
+               0x7fb6f0ec702a
+
+    10.74%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x00007fb6f0ec702a
+            |
+            ---0x7fb6f0ec702a
+
+     3.57%     3.57%  wathen_demo  libgraphblas.so.10.3.0  [.] GB_msort_3_32_32_32._omp_fn.2
+            |
+            ---GB_msort_3_32_32_32._omp_fn.2
+
+     3.15%     2.22%  wathen_demo  libgraphblas.so.10.3.0  [.] GB__bld__plus_fp64._omp_fn.2
+            |
+            ---GB__bld__plus_fp64._omp_fn.2
+               |          
+                --0.93%--0xffffffffbcc011fe
+                          |          
+                           --0.81%--0xffffffffbc082da7
+                                     |          
+                                      --0.63%--0xffffffffbc082a86
+                                                0xffffffffbc15e512
+
+     2.84%     2.79%  wathen_demo  libgraphblas.so.10.3.0  [.] GB_builder._omp_fn.0
+            |
+            ---GB_builder._omp_fn.0
+
+     2.84%     2.49%  wathen_demo  libgraphblas.so.10.3.0  [.] GB_msort_3_32_32_32._omp_fn.1
+            |
+            ---GB_msort_3_32_32_32._omp_fn.1
+
+     1.83%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbcc011fe
+            |
+            ---0xffffffffbcc011fe
+               |          
+                --1.71%--0xffffffffbc082da7
+                          |          
+                          |--0.86%--0xffffffffbc082a86
+                          |          0xffffffffbc15e512
+                          |          
+                           --0.85%--0xffffffffbc082b14
+                                     |          
+                                      --0.67%--0xffffffffbc2e94ba
+                                                |          
+                                                 --0.60%--0xffffffffbc2e9272
+
+     1.71%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc082da7
+            |
+            ---0xffffffffbc082da7
+               |          
+               |--0.86%--0xffffffffbc082a86
+               |          0xffffffffbc15e512
+               |          
+                --0.85%--0xffffffffbc082b14
+                          |          
+                           --0.67%--0xffffffffbc2e94ba
+                                     |          
+                                      --0.60%--0xffffffffbc2e9272
+
+     0.86%     0.86%  wathen_demo  libgomp.so.1.0.0        [.] 0x000000000001de6d
+            |          
+             --0.83%--0
+                       0x7fb6f0ec6e6d
+
+     0.86%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x00007fb6f0ec6e6d
+            |
+            ---0x7fb6f0ec6e6d
+
+     0.86%     0.86%  wathen_demo  [unknown]               [k] 0xffffffffbc15e512
+            |          
+             --0.63%--GB__bld__plus_fp64._omp_fn.2
+                       0xffffffffbcc011fe
+                       0xffffffffbc082da7
+                       0xffffffffbc082a86
+                       0xffffffffbc15e512
+
+     0.86%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc082a86
+            |
+            ---0xffffffffbc082a86
+               0xffffffffbc15e512
+
+     0.85%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc082b14
+            |
+            ---0xffffffffbc082b14
+               |          
+                --0.67%--0xffffffffbc2e94ba
+                          |          
+                           --0.60%--0xffffffffbc2e9272
+
+     0.71%     0.71%  wathen_demo  libgraphblas.so.10.3.0  [.] GB_builder._omp_fn.6
+            |
+            ---0
+               GB_builder._omp_fn.6
+
+     0.67%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc2e94ba
+            |
+            ---0xffffffffbc2e94ba
+               |          
+                --0.60%--0xffffffffbc2e9272
+
+     0.64%     0.00%  wathen_demo  [unknown]               [.] 0x000142da000142db
+            |
+            ---0x142da000142db
+               GB_quicksort_3_32_32_32
+
+     0.64%     0.00%  wathen_demo  [unknown]               [.] 0x0002a5980002a579
+            |
+            ---0x2a5980002a579
+               GB_quicksort_3_32_32_32
+
+     0.60%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc2e9272
+            |
+            ---0xffffffffbc2e9272
+
+     0.53%     0.00%  wathen_demo  [unknown]               [.] 0x0003eb020003eb50
+            |
+            ---0x3eb020003eb50
+               GB_quicksort_3_32_32_32
+
+     0.50%     0.08%  wathen_demo  wathen_demo             [.] wathen
+     0.49%     0.00%  wathen_demo  ld-2.28.so              [.] _dl_sysdep_start
+     0.49%     0.00%  wathen_demo  ld-2.28.so              [.] dl_main
+     0.45%     0.45%  wathen_demo  ld-2.28.so              [.] _dl_relocate_object
+     0.44%     0.00%  wathen_demo  [unknown]               [.] 0x00068fb300068fb2
+     0.41%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbcc0012e
+     0.41%     0.00%  wathen_demo  [unknown]               [.] 0x0006b18d0006b18c
+     0.41%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc00549b
+     0.37%     0.37%  wathen_demo  libgraphblas.so.10.3.0  [.] GB_builder._omp_fn.4
+     0.36%     0.36%  wathen_demo  libgomp.so.1.0.0        [.] 0x000000000001e036
+     0.36%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x00007fb6f0ec7036
+     0.35%     0.00%  wathen_demo  [unknown]               [.] 0x00082e8c00082e40
+     0.32%     0.00%  wathen_demo  libc-2.28.so            [.] __GI___mkdir
+     0.31%     0.00%  wathen_demo  [unknown]               [.] 0x00096fea00096feb
+     0.27%     0.27%  wathen_demo  libgomp.so.1.0.0        [.] 0x000000000001e031
+     0.27%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x00007fb6f0ec7031
+     0.27%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc38229a
+     0.26%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc380fe5
+     0.25%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc2e64d4
+     0.25%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc324a0e
+     0.25%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc308ca6
+     0.25%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc380d34
+     0.25%     0.25%  wathen_demo  ld-2.28.so              [.] _dl_lookup_symbol_x
+     0.25%     0.00%  wathen_demo  libgraphblas.so.10.3.0  [.] 0x00007fb6f11de9c0
+     0.23%     0.00%  wathen_demo  [unknown]               [.] 0x00010f7b00010f7e
+     0.22%     0.00%  wathen_demo  [unknown]               [.] 0x0000fd640000fd65
+     0.22%     0.00%  wathen_demo  [unknown]               [.] 0x0001117300011172
+     0.22%     0.00%  wathen_demo  [unknown]               [.] 0x000237f200023827
+     0.22%     0.22%  wathen_demo  [unknown]               [k] 0xffffffffbcc011e0
+     0.22%     0.22%  wathen_demo  ld-2.28.so              [.] do_lookup_x
+     0.21%     0.00%  wathen_demo  [unknown]               [.] 0x000249ec000249ee
+     0.20%     0.00%  wathen_demo  [unknown]               [.] 0x0003ac980003ac99
+     0.20%     0.00%  wathen_demo  [unknown]               [.] 0x0003b8b80003b89f
+     0.20%     0.00%  wathen_demo  [unknown]               [k] 0x2e2f64746c65646e
+     0.20%     0.00%  wathen_demo  [unknown]               [.] 0x0005091300050912
+     0.19%     0.00%  wathen_demo  [unknown]               [.] 0x0001388300013882
+     0.19%     0.00%  wathen_demo  [unknown]               [.] 0x0005287500050f46
+     0.19%     0.00%  wathen_demo  [unknown]               [.] 0x000522040005220e
+     0.19%     0.00%  wathen_demo  [unknown]               [.] 0x00067b2a00067b2f
+     0.19%     0.00%  wathen_demo  [unknown]               [.] 0x00068a5f00068a5b
+     0.19%     0.19%  wathen_demo  libgomp.so.1.0.0        [.] 0x000000000000c954
+     0.19%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x00007fb6f0eb5954
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0007c96c0007c96b
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0007e8690007e86a
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0007e0c30007e116
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0009075d0009075c
+     0.18%     0.18%  wathen_demo  [unknown]               [k] 0xffffffffbc2e9422
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x00004a2500004a26
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0009276500090e57
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0000b8a30000b8a2
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x00003c0300003c57
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0000bd7c0000bd5a
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x00024fbe00024fbb
+     0.18%     0.18%  wathen_demo  libgomp.so.1.0.0        [.] 0x000000000001de69
+     0.18%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x00007fb6f0ec6e69
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x00026c0b00026c0a
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x000255c1000255c2
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x00038a5d00038a3a
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x00028e0e00028e0f
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x00027da200027dad
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x00040e3200040e31
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x00027754000276c2
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x000507d8000507da
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0004fe360004e503
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0004ede00004ed60
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0003954200039543
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0007fe5f0007fd99
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0004021500040214
+     0.18%     0.18%  wathen_demo  libgomp.so.1.0.0        [.] 0x000000000000c971
+     0.18%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x00007fb6f0eb5971
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0006d6830006d687
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x000567c10005680a
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x000566dc000566dd
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x000796b3000796b2
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0005573300055732
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0006cfd80006cfba
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x00077a1300077a12
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0006c0730006c070
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0007ff010007ff00
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x000665b600064c80
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0009908000099081
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x000642ba000642d8
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x000987ff000987f9
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0008f7850008f786
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0008e7590008e798
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x000976e8000976e9
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0008e05d0008e03d
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x00099cf300099cf2
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0008d63f0008d69d
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x00078a4100078a42
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0009ac130009ac17
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0008879900088799
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0009a0c00009a117
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x00084eff00084efb
+     0.18%     0.00%  wathen_demo  [unknown]               [.] 0x0008cf770008b791
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0008813400086854
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0009320200093201
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x00084af900084b19
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0008b6220008b623
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0006fbe30006fbe2
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x00086cae00086caf
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0006f5c30006f5c2
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x00093df200093df1
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x00075f8f00075f90
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0007559b0007559f
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x000714ca000714c9
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x000708be00070898
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0007b1e20007b1e1
+     0.17%     0.17%  wathen_demo  [unknown]               [k] 0xffffffffbc2e6495
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0007bd960007bd4d
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0006e4a70006e473
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0007c2290007c226
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0006108b0006108c
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x00062d4000062d90
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x000704e3000704e2
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x00059b3d00059b18
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0008b27600089992
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x00061a6c00061a6d
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x000620c3000620c2
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0005c6ac0005c6ad
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x00073f2600073f27
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0005982b0005982e
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0008a86300088f51
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x000602ae000602af
+     0.17%     0.17%  wathen_demo  [unknown]               [k] 0xffffffffbc2e61a8
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x00057f3700057f36
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0006203300062066
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0004a5c60004a5c4
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0005bef70005a683
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x00088bb600088baa
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0004ce150004ce14
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0004659900046598
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0007423900074238
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0005ead50005ead6
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x00042e9200042e8b
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x00049c5f00049c5b
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0005d7530005d707
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0004d7f10004d7f0
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x00045a1b00045a1c
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x00042df900042e1e
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x000493e3000493e2
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0005d01e0005d01d
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0004bcb10004bce5
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x00044eb200044eb1
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0002e0cc0002e0cb
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0004825500048207
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x00033ecd00033ece
+     0.17%     0.17%  wathen_demo  libgomp.so.1.0.0        [.] 0x000000000001e18f
+     0.17%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x00007fb6f0ec718f
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0002ca4c0002ca4d
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0003775d0003775c
+     0.17%     0.00%  wathen_demo  [unknown]               [.] 0x0002fc0d0002fc0e
+     0.16%     0.00%  wathen_demo  [unknown]               [.] 0x00034e3600034e35
+     0.16%     0.00%  wathen_demo  [unknown]               [.] 0x0002f5fa0002f5f9
+     0.16%     0.00%  wathen_demo  [unknown]               [.] 0x000373ee000373ed
+     0.16%     0.00%  wathen_demo  [unknown]               [.] 0x00048af000048b21
+     0.16%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37d04f
+     0.16%     0.00%  wathen_demo  [unknown]               [.] 0x0002c61f0002c61e
+     0.16%     0.00%  wathen_demo  [unknown]               [.] 0x0001f8c90001f8c8
+     0.16%     0.00%  wathen_demo  [unknown]               [.] 0x000477690004776a
+     0.16%     0.00%  wathen_demo  [unknown]               [.] 0x0002e8fa0002e8f9
+     0.16%     0.00%  wathen_demo  [unknown]               [.] 0x00017d8a00017d8b
+     0.16%     0.00%  wathen_demo  [unknown]               [.] 0x000221cb000221ca
+     0.16%     0.00%  wathen_demo  [unknown]               [.] 0x000331fd000331fc
+     0.16%     0.00%  wathen_demo  [unknown]               [.] 0x0001dd4f0001dd49
+     0.16%     0.00%  wathen_demo  [unknown]               [.] 0x0001968000019681
+     0.16%     0.00%  wathen_demo  [unknown]               [.] 0x0000019f0000017a
+     0.16%     0.00%  wathen_demo  [unknown]               [.] 0x0001685500016854
+     0.16%     0.00%  wathen_demo  [unknown]               [.] 0x000221eb000208c6
+     0.16%     0.00%  wathen_demo  [unknown]               [.] 0x000030b7000030e4
+     0.15%     0.00%  wathen_demo  [unknown]               [.] 0x00032b670003124d
+     0.15%     0.00%  wathen_demo  [unknown]               [.] 0x0001ebab0001eba8
+     0.15%     0.00%  wathen_demo  [unknown]               [.] 0x0000806f00008061
+     0.15%     0.00%  wathen_demo  [unknown]               [.] 0x000168dc000168dd
+     0.15%     0.00%  wathen_demo  [unknown]               [.] 0x0001a76a00018e44
+     0.15%     0.00%  wathen_demo  [unknown]               [.] 0x0000d2e70000d2e8
+     0.15%     0.00%  wathen_demo  [unknown]               [.] 0x00000983000009d5
+     0.15%     0.00%  wathen_demo  [unknown]               [.] 0x00020f6c00020f6d
+     0.15%     0.00%  wathen_demo  [unknown]               [.] 0x00001f8b00001f8a
+     0.15%     0.00%  wathen_demo  [unknown]               [.] 0x0000e8070000e855
+     0.15%     0.00%  wathen_demo  [unknown]               [.] 0x00018a1f00018a9a
+     0.15%     0.00%  wathen_demo  [unknown]               [.] 0x0000841a000083fc
+     0.15%     0.00%  wathen_demo  [unknown]               [.] 0x0001fbd30001fbd2
+     0.15%     0.00%  wathen_demo  [unknown]               [.] 0x00009c4300009c42
+     0.15%     0.00%  wathen_demo  [unknown]               [.] 0x00031cf600031cea
+     0.15%     0.00%  wathen_demo  [unknown]               [.] 0x0000cdcd0000cdce
+     0.15%     0.00%  wathen_demo  [unknown]               [.] 0x00008bd200008b82
+     0.14%     0.00%  wathen_demo  [unknown]               [.] 0x0000c6c90000c6ca
+     0.14%     0.00%  wathen_demo  [unknown]               [.] 0x00012c3e00012c3d
+     0.14%     0.00%  wathen_demo  [unknown]               [.] 0x0000316f0000316a
+     0.14%     0.00%  wathen_demo  [unknown]               [.] 0x0001c68d0001c642
+     0.14%     0.00%  wathen_demo  [unknown]               [.] 0x0000b76c0000b76d
+     0.14%     0.00%  wathen_demo  [unknown]               [.] 0x0000ca220000ca23
+     0.14%     0.14%  wathen_demo  [unknown]               [k] 0xffffffffbc4f9dbd
+     0.14%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc305de4
+     0.14%     0.00%  wathen_demo  [unknown]               [.] 0x0001275d0001275e
+     0.14%     0.00%  wathen_demo  [unknown]               [.] 0x0001b7080001b708
+     0.13%     0.13%  wathen_demo  ld-2.28.so              [.] _dl_fixup
+     0.13%     0.13%  wathen_demo  libgraphblas.so.10.3.0  [.] GB_Context_nthreads_max_get@plt
+     0.13%     0.00%  wathen_demo  [unknown]               [.] 0x0001b97b0001b97a
+     0.13%     0.00%  wathen_demo  [unknown]               [.] 0x0000000000355c80
+     0.12%     0.12%  wathen_demo  ld-2.28.so              [.] check_match
+     0.12%     0.00%  wathen_demo  ld-2.28.so              [.] 0x00007fb6f5632690
+     0.12%     0.12%  wathen_demo  [unknown]               [k] 0xffffffffbc082d72
+     0.12%     0.00%  wathen_demo  [unknown]               [.] 0x0000000003f82640
+     0.12%     0.00%  wathen_demo  [unknown]               [.] 0x0001adb30001adb2
+     0.12%     0.00%  wathen_demo  [unknown]               [k] 0x00007fb6eb0a8010
+     0.12%     0.00%  wathen_demo  libgraphblas.so.10.3.0  [.] GB_builder._omp_fn.2
+     0.12%     0.12%  wathen_demo  [unknown]               [k] 0xffffffffbca27ac0
+     0.12%     0.00%  wathen_demo  [unknown]               [.] 0x0000ea630000ea62
+     0.12%     0.00%  wathen_demo  [unknown]               [.] 0x000120e0000120ee
+     0.12%     0.12%  wathen_demo  [unknown]               [k] 0xffffffffbca0f2e7
+     0.12%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc306a21
+     0.12%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc303872
+     0.11%     0.00%  wathen_demo  [unknown]               [.] 0x0000eca90000eca8
+     0.11%     0.11%  wathen_demo  ld-2.28.so              [.] strcmp
+     0.11%     0.00%  wathen_demo  [unknown]               [.] 0x62696c00312e6f73
+     0.11%     0.11%  wathen_demo  [unknown]               [k] 0xffffffffbca2373a
+     0.11%     0.00%  wathen_demo  libc-2.28.so            [.] __mmap
+     0.11%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc2ee2e9
+     0.11%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc2c8696
+     0.11%     0.00%  wathen_demo  [unknown]               [.] 0x00006f5c00006f5d
+     0.11%     0.00%  wathen_demo  [unknown]               [k] 0x00007fb6eb31a010
+     0.11%     0.00%  wathen_demo  libgraphblas.so.10.3.0  [.] GB_cast_int._omp_fn.3
+     0.10%     0.00%  wathen_demo  [unknown]               [.] 0x00005ce400005ce5
+     0.10%     0.00%  wathen_demo  [unknown]               [.] 0x0000578a0000578c
+     0.10%     0.00%  wathen_demo  [unknown]               [.] 0x000064f600006525
+     0.07%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37cb43
+     0.07%     0.07%  wathen_demo  [unknown]               [k] 0xffffffffbc2e8f21
+     0.06%     0.06%  wathen_demo  libgraphblas.so.10.3.0  [.] GB_build
+     0.05%     0.00%  wathen_demo  [unknown]               [.] 0x00000000000076c1
+     0.05%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] GOMP_parallel
+     0.05%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc43f900
+     0.04%     0.04%  wathen_demo  [unknown]               [k] 0xffffffffbc37cbc9
+     0.04%     0.00%  wathen_demo  [unknown]               [k] 0x00044b0000000065
+     0.04%     0.04%  wathen_demo  [unknown]               [k] 0xffffffffbca27ac5
+     0.03%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37cd91
+     0.03%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37c108
+     0.03%     0.03%  wathen_demo  [unknown]               [k] 0xffffffffbc37d025
+     0.03%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37d072
+     0.02%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc382288
+     0.02%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37ae27
+     0.02%     0.00%  wathen_demo  [unknown]               [k] 0x65746975532e2f64
+     0.02%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37b49c
+     0.02%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc44d3f3
+     0.02%     0.00%  wathen_demo  [unknown]               [k] 0x4b0000000065646f
+     0.02%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37adb6
+     0.02%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc380b0a
+     0.02%     0.02%  wathen_demo  [unknown]               [k] 0xffffffffbc44d2eb
+     0.01%     0.00%  wathen_demo  [unknown]               [k] 0x000000044b000000
+     0.01%     0.01%  wathen_demo  [unknown]               [k] 0xffffffffbc37a840
+     0.01%     0.01%  wathen_demo  [unknown]               [k] 0xffffffffbc443f25
+     0.01%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37d05d
+     0.01%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37b422
+     0.01%     0.01%  wathen_demo  [unknown]               [k] 0xffffffffbc379f5c
+     0.01%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37d039
+     0.01%     0.01%  wathen_demo  [unknown]               [k] 0xffffffffbc37ac2f
+     0.01%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc5111d7
+     0.01%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37a880
+     0.01%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37c759
+     0.01%     0.00%  wathen_demo  [unknown]               [k] 0x000000000000044b
+     0.01%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37c6b6
+     0.01%     0.01%  wathen_demo  [unknown]               [k] 0xffffffffbc37d03c
+     0.01%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37ba09
+     0.01%     0.01%  wathen_demo  [unknown]               [k] 0xffffffffbc38be3b
+     0.01%     0.01%  wathen_demo  ld-2.28.so              [.] __GI___tunables_init
+     0.01%     0.01%  wathen_demo  libc-2.28.so            [.] _IO_default_xsputn
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc365f3a
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc43f902
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc380d92
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc43f8d9
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37cc49
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37ac1d
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc380b0c
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0x72472f6573726170
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37a6aa
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc085006
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc5111fb
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc4e4a92
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37ac2d
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37cb46
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0x0000000000199a80
+     0.00%     0.00%  wathen_demo  libgraphblas.so.10.3.0  [.] GB_jitifyer_path_256
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc443f1a
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37c7da
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0x622f62696c2f302e
+     0.00%     0.00%  wathen_demo  libc-2.28.so            [.] vfprintf
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc3949f1
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc443eee
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc380aea
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc394a19
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37cbd7
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37b8a5
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37cb2f
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0x0031662f632f302e
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37c74d
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc3949e5
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc44d2e5
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffc0a5b38d
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37a79e
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc38be0e
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0x632f62696c2f302e
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37ada0
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0x332f62696c2f302e
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc332c04
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc44d3c1
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc005586
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc39491e
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37c6b9
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc44d3c9
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37a839
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37b8c3
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc365ff7
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37adc6
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc443ea6
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc394a12
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbcc013a2
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbcc011e8
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc38228a
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37ae29
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37a70d
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc380ceb
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc38be6a
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37cda2
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc44d3f6
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37d051
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37ada7
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37cadb
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37b2e2
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc381034
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37ad17
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37cf2d
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc380fc3
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc394912
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc39490f
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0x302f62696c2f302e
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37c411
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37cc40
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37b870
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc380fe8
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc5111b1
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc004f14
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0x00000000044b0000
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffc0a5b395
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc335ec7
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37b886
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc380d5b
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37adb8
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc43f8ec
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc125f45
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc380d37
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37b876
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0x382f62696c2f302e
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc380f90
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc44d2e7
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37b9c6
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc00503f
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc380cb1
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc365f9e
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc5112ed
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc199f49
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc365f70
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37ad86
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37ae06
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc38bedb
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc365e05
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc365f9c
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37b41d
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc380b46
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc380f95
+     0.00%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x000000000001b40a
+     0.00%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x00007fb6f0ec440a
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc125f7a
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc3948f6
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37ae05
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0x6c65646e616d2f65
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37c76b
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc44d3af
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc085081
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37d042
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37d060
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc5111d0
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37adc4
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37a6be
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc335e9d
+     0.00%     0.00%  wathen_demo  libgraphblas.so.10.3.0  [.] GB_prejit@plt
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc380caa
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc365fb3
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37cc2c
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0x652f62696c2f302e
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37d074
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37ad21
+     0.00%     0.00%  wathen_demo  ld-2.28.so              [.] _dl_runtime_resolve_xsavec
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37d053
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37d07c
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc380d8a
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37cbdd
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc51123e
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0x352f62696c2f302e
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc511193
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37a697
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc332d03
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc332cb6
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc3e1235
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc37a70a
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc380cc5
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0x66006372732f302e
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc5111a4
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc379fd3
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc125f5f
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0x662f62696c2f302e
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc38be6e
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc085040
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffc0a58fd8
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffc0a5b3ee
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffc0a5b122
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffc0a5aece
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc3946a5
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc381009
+     0.00%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x000000000001b399
+     0.00%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x00007fb6f0ec4399
+     0.00%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x000000000001b384
+     0.00%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x00007fb6f0ec4384
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc38be05
+     0.00%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x000000000001b486
+     0.00%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x00007fb6f0ec4486
+     0.00%     0.00%  wathen_demo  libc-2.28.so            [.] _setjmp
+     0.00%     0.00%  wathen_demo  libpthread-2.28.so      [.] start_thread
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc1af00b
+     0.00%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x00007fb6f0ec6eee
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc1af6de
+     0.00%     0.00%  wathen_demo  libc-2.28.so            [.] __snprintf
+     0.00%     0.00%  wathen_demo  ld-2.28.so              [.] _dl_start_user
+     0.00%     0.00%  wathen_demo  ld-2.28.so              [.] _dl_start
+     0.00%     0.00%  wathen_demo  libpthread-2.28.so      [.] __errno_location
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc37cd7e
+     0.00%     0.00%  wathen_demo  libc-2.28.so            [.] __sigsetjmp
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc1e0b02
+     0.00%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x000000000001df34
+     0.00%     0.00%  wathen_demo  libgomp.so.1.0.0        [.] 0x00007fb6f0ec6f34
+     0.00%     0.00%  wathen_demo  libc-2.28.so            [.] __ctype_init
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc2a3001
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc2e68a0
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffc0508d24
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0x0036312f632f302e
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc5112c2
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbcc00090
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc0054bd
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc2e6287
+     0.00%     0.00%  wathen_demo  libc-2.28.so            [.] __clone
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc34c5cd
+     0.00%     0.00%  wathen_demo  [unknown]               [.] 0xffffffffbc35330f
+     0.00%     0.00%  wathen_demo  libc-2.28.so            [.] __strchrnul_avx2
+     0.00%     0.00%  wathen_demo  libpthread-2.28.so      [.] 0x0000000000006504
+     0.00%     0.00%  wathen_demo  libpthread-2.28.so      [.] 0x00007fb6f0c8f504
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc125f35
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc3532f7
+     0.00%     0.00%  wathen_demo  ld-2.28.so              [.] _start
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc308c41
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc365f94
+     0.00%     0.00%  wathen_demo  [unknown]               [k] 0xffffffffbc2e8d7a
+     0.00%     0.00%  wathen_demo  libgraphblas.so.10.3.0  [.] GB_file_mkdir
+
+
+#
+# (Tip: For tracepoint events, try: perf report -s trace_fields)
+#
