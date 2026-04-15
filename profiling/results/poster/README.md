@@ -18,12 +18,22 @@ Files
 
 Usage
 -----
-Run `python3 generate_poster_charts.py` or `python3 generate_runtime_breakdown.py` from this directory.
+This script requires Python and the following packages:
+  - matplotlib
+  - numpy
+  - pandas
 
-The runtime breakdown chart is data-driven:
-  - It reads runtime percentages from `runtime_breakdown.csv` by default.
-  - It can also parse perf output from `../analysis/top_functions.txt` if the CSV is missing.
-  - Use `--input path/to/file.csv` to provide a different data source.
+It is recommended to run the script from a virtual environment.
+
+Example (MacOS/Linux):
+  python3 -m venv .venv
+  source .venv/bin/activate
+  pip install matplotlib numpy pandas
+  cd GraphBLAS/profiling/results/poster
+  python generate_poster_charts.py
+
+If you do not activate a virtual environment, use the venv Python directly:
+  /nfs/home/mandeltd/.venv/bin/python generate_poster_charts.py
 
 Data source
 -----------
