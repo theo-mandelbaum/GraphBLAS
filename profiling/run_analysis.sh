@@ -40,11 +40,12 @@ echo "✓ Library size: $(du -h "$REPO_ROOT/build/libgraphblas.so.10" | awk '{pr
 echo ""
 
 # Test with perf
-echo "=== PROFILING WATHEN_DEMO (341x341 matrix) ==="
+echo "=== PROFILING WATHEN_DEMO (1000x1000 matrix) ==="
 if command -v perf &> /dev/null; then
     echo "Running perf profiling..."
     cd "$REPO_ROOT/build"
-    perf record -o "$OUTPUT_DIR/perf.data" -g -- ./wathen_demo 341 341 2>/dev/null
+    export LD_LIBRARY_PATH="$REPO_ROOT/build:$LD_LIBRARY_PATH"
+    perf record -o "$OUTPUT_DIR/perf.data" -g -F 10000 -- ./wathen_demo 1000 1000 2>/dev/null
     cd "$OLDPWD"
     
     echo "Recording perf results..."
@@ -60,7 +61,8 @@ echo ""
 # Memory profiling
 echo "=== MEMORY USAGE (via /usr/bin/time) ==="
 cd "$REPO_ROOT/build"
-/usr/bin/time -v ./wathen_demo 341 341 2>&1 > /dev/null | \
+export LD_LIBRARY_PATH="$REPO_ROOT/build:$LD_LIBRARY_PATH"
+/usr/bin/time -v ./wathen_demo 1000 1000 2>&1 > /dev/null | \
     grep -E "Elapsed|Maximum|Page" | tee "$OUTPUT_DIR/memory_usage.txt"
 cd "$OLDPWD"
 echo ""
@@ -83,7 +85,8 @@ for threads in 1 2 4 8 16 32; do
     # Time the command
     T0=$(date +%s%N)
     cd "$REPO_ROOT/build"
-    ./wathen_demo 341 341 0 $threads > /dev/null 2>&1
+    export LD_LIBRARY_PATH="$REPO_ROOT/build:$LD_LIBRARY_PATH"
+    ./wathen_demo 1000 1000 0 $threads > /dev/null 2>&1
     cd "$OLDPWD"
     T1=$(date +%s%N)
     
