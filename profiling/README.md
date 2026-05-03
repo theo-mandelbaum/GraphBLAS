@@ -10,6 +10,29 @@ Directories
   ./results/analysis  - analysis outputs and logs
   ./results/poster    - poster visuals and chart generation
 
+Comparing static vs dynamic scheduling
+--------------------------------------
+To compare the effect of `schedule(static,1)` vs `schedule(dynamic,1)` in `GB_sort.c` (line 776):
+
+1. Set the schedule you want to test in `Source/sort/GB_sort.c` line 776, then rebuild:
+
+   cd ..
+   make JOBS=32 all
+
+2. Run the profiling binary and save output to a log:
+
+   # for static:
+   cd profiling
+   ./test_gbsort_profile 2> static.log
+
+   # for dynamic (after changing line 776 back and rebuilding):
+   ./test_gbsort_profile 2> dynamic.log
+
+3. Extract just the timing lines for comparison:
+
+   grep GBSORT_PROFILE static.log
+   grep GBSORT_PROFILE dynamic.log
+
 How to run
 ----------
 1. Build GraphBLAS and demos from the repo root:
