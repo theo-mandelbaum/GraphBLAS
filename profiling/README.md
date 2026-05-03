@@ -20,7 +20,22 @@ How to run
    # For faster compilation, use the repository recommendation:
    # make JOBS=32 all
 
-2. Run the deallocation workflow:
+
+How to run everything
+---------------------
+1. Run everything from the profiling file.
+
+   cd profiling
+   ./run_all.sh
+
+   Outputs:
+      everything seen below is run
+
+---
+OR
+---
+
+1. Run the deallocation workflow:
 
    cd profiling
    chmod +x run_profiling_analysis.sh
@@ -30,7 +45,7 @@ How to run
      ./results/dealloc/dealloc_timing.csv
      ./results/dealloc/dealloc_benchmark.log
 
-3. Run the scaling test:
+2. Run the scaling test:
 
    chmod +x demonstrate_scaling.sh
    ./demonstrate_scaling.sh
@@ -38,7 +53,7 @@ How to run
    Output:
      ./results/scaling/scaling_detailed.csv
 
-4. Run the analysis summary:
+3. Run the analysis summary:
 
    chmod +x run_analysis.sh
    ./run_analysis.sh
